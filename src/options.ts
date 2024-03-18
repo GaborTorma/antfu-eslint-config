@@ -8,12 +8,20 @@ export const defaultOptions: OptionsConfig & FlatConfigItem = {
       extraFileExtensions: ['.vue'],
     },
     overrides: {
-      'unused-imports/no-unused-vars': 'warn', // https://www.npmjs.com/package/eslint-plugin-unused-imports#usage
+      // https://www.npmjs.com/package/eslint-plugin-unused-imports#usage
+      'unused-imports/no-unused-vars': [
+        'warn',
+        { args: 'after-used', argsIgnorePattern: '^_', vars: 'all', varsIgnorePattern: '^_' },
+      ],
     },
   },
   javascript: {
     overrides: {
-      'unused-imports/no-unused-vars': 'warn', // https://www.npmjs.com/package/eslint-plugin-unused-imports#usage
+      // https://www.npmjs.com/package/eslint-plugin-unused-imports#usage
+      'unused-imports/no-unused-vars': [
+        'warn',
+        { args: 'after-used', argsIgnorePattern: '^_', vars: 'all', varsIgnorePattern: '^_' },
+      ],
     },
   },
   formatters: true, // https://github.com/antfu/eslint-config?tab=readme-ov-file#formatters
