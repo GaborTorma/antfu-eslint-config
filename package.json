@@ -50,6 +50,7 @@
   "dependencies": {
     "@antfu/eslint-config": "^2.8.3",
     "defu": "^6.1.4",
+    "eslint": "^8.57.0",
     "eslint-plugin-format": "^0.1.0"
   },
   "devDependencies": {
@@ -57,7 +58,6 @@
     "@antfu/utils": "^0.7.7",
     "@types/node": "^20.11.28",
     "bumpp": "^9.4.0",
-    "eslint": "^8.57.0",
     "esno": "^4.7.0",
     "lint-staged": "^15.2.2",
     "pnpm": "^8.15.5",
