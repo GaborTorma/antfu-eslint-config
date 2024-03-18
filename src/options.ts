@@ -13,14 +13,8 @@ export const defaultOptions: OptionsConfig & FlatConfigItem = {
   },
 }
 
-export const defaultRules: UserConfigItem = {
+export const vueRules: UserConfigItem = {
   rules: {
-    'object-shorthand': ['error', 'always', {
-      avoidQuotes: false,
-    }],
-    'ts/method-signature-style': ['error', 'method'],
-    'no-console': 'off',
-    'unused-imports/no-unused-vars': 'warn',
     'vue/component-name-in-template-casing': ['error', 'kebab-case', {
       registeredComponentsOnly: false,
     }],
@@ -28,6 +22,11 @@ export const defaultRules: UserConfigItem = {
       singleline: 100,
       multiline: 1,
     }],
+  },
+}
+
+export const lengthRules: UserConfigItem = {
+  rules: {
     'max-len': [
       'warn',
       {
@@ -40,5 +39,16 @@ export const defaultRules: UserConfigItem = {
         ignoreTrailingComments: true,
       },
     ],
+  },
+}
+
+export const defaultRules: UserConfigItem = {
+  rules: {
+    'object-shorthand': ['error', 'always', {
+      avoidQuotes: false,
+    }],
+    'ts/method-signature-style': ['error', 'method'],
+    'no-console': 'off',
+    'unused-imports/no-unused-vars': 'warn',
   },
 }
