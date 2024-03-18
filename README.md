@@ -5,13 +5,11 @@
 [![License][license-src]][license-href]
 [![code style][code-style-src]][code-style-href]
 
-Default options for @antfu/eslint-config
+Default options and rules for @antfu/eslint-config
 
 ## License
 
-[MIT](./LICENSE) License © 2023-PRESENT
-
-Forked from [Anthony Fu starter-ts](https://github.com/antfu/starter-ts)
+[MIT](./LICENSE) License © 2024-present
 
 <!-- Badges -->
 
