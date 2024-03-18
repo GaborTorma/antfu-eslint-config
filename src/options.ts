@@ -1,4 +1,4 @@
-import type { FlatConfigItem, OptionsConfig } from '@antfu/eslint-config'
+import type { FlatConfigItem, OptionsConfig, UserConfigItem } from '@antfu/eslint-config'
 
 export const defaultOptions: OptionsConfig & FlatConfigItem = {
   typescript: {
@@ -8,6 +8,12 @@ export const defaultOptions: OptionsConfig & FlatConfigItem = {
     },
   },
   markdown: false,
+  formatters: {
+    markdown: 'prettier',
+  },
+}
+
+export const defaultRules: UserConfigItem = {
   rules: {
     'object-shorthand': ['error', 'always', {
       avoidQuotes: false,
@@ -34,8 +40,5 @@ export const defaultOptions: OptionsConfig & FlatConfigItem = {
         ignoreTrailingComments: true,
       },
     ],
-  },
-  formatters: {
-    markdown: 'prettier',
   },
 }
