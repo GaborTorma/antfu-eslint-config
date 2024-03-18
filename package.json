@@ -1,17 +1,17 @@
 {
-  "name": "antfu-starter-ts",
+  "name": "@gabortorma/antfu-eslint-config",
   "type": "module",
   "version": "0.0.0",
   "packageManager": "pnpm@8.15.3",
-  "description": "_description_",
+  "description": "Default options for @antfu/eslint-config",
   "author": "Anthony Fu <anthonyfu117@hotmail.com>",
   "license": "MIT",
-  "homepage": "https://github.com/gabortorma/antfu-starter-ts#readme",
+  "homepage": "https://github.com/gabortorma/antfu-eslint-config#readme",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/gabortorma/antfu-starter-ts.git"
+    "url": "git+https://github.com/gabortorma/antfu-eslint-config.git"
   },
-  "bugs": "https://github.com/gabortorma/antfu-starter-ts/issues",
+  "bugs": "https://github.com/gabortorma/antfu-eslint-config/issues",
   "keywords": [],
   "sideEffects": false,
   "exports": {
@@ -41,7 +41,7 @@
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prepublishOnly": "nr build",
-    "release": "bumpp && npm publish",
+    "release": "bumpp && npm publish --access=public",
     "start": "esno src/index.ts",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
