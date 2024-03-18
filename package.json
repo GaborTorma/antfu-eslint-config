@@ -45,6 +45,7 @@
     "start": "esno src/index.ts",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
+    "view": "eslint-flat-config-viewer",
     "prepare": "simple-git-hooks"
   },
   "dependencies": {
@@ -58,6 +59,7 @@
     "@antfu/utils": "^0.7.7",
     "@types/node": "^20.11.28",
     "bumpp": "^9.4.0",
+    "eslint-flat-config-viewer": "^0.1.11",
     "esno": "^4.7.0",
     "lint-staged": "^15.2.2",
     "pnpm": "^8.15.5",
