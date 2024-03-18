@@ -1,2 +1,11 @@
-export const one = 1
-export const two = 2
+import type { Awaitable, FlatConfigItem, OptionsConfig, UserConfigItem } from '@antfu/eslint-config'
+import config from '@antfu/eslint-config'
+import { defu } from 'defu'
+import { defaultOptions } from './options'
+
+export function antfu(options?: OptionsConfig & FlatConfigItem, ...userConfigs: Awaitable<UserConfigItem | UserConfigItem[]>[]): Promise<UserConfigItem[]> {
+  return config(defu(
+    options,
+    defaultOptions,
+  ), ...userConfigs)
+}
