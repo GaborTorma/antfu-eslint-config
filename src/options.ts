@@ -41,7 +41,6 @@ export const lengthRules: UserConfigItem = {
         ignoreStrings: true, // https://eslint.org/docs/latest/rules/max-len#ignorestrings
         ignoreTemplateLiterals: true, // https://eslint.org/docs/latest/rules/max-len#ignoretemplateliterals
         ignoreRegExpLiterals: true, // https://eslint.org/docs/latest/rules/max-len#ignoreregexpliterals
-        ignorePattern: true, // https://eslint.org/docs/latest/rules/max-len#ignorepattern
       },
     ],
   },
