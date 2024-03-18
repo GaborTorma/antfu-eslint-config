@@ -1,4 +1,4 @@
-import type { FlatConfigItem, OptionsConfig, UserConfigItem } from '@antfu/eslint-config'
+import type { Awaitable, FlatConfigItem, OptionsConfig, UserConfigItem } from '@antfu/eslint-config'
 
 export const defaultOptions: OptionsConfig & FlatConfigItem = {
   // https://github.com/antfu/eslint-config?tab=readme-ov-file#type-aware-rules
@@ -6,6 +6,14 @@ export const defaultOptions: OptionsConfig & FlatConfigItem = {
     tsconfigPath: 'tsconfig.json',
     parserOptions: {
       extraFileExtensions: ['.vue'],
+    },
+    overrides: {
+      'unused-imports/no-unused-vars': 'warn', // https://www.npmjs.com/package/eslint-plugin-unused-imports#usage
+    },
+  },
+  javascript: {
+    overrides: {
+      'unused-imports/no-unused-vars': 'warn', // https://www.npmjs.com/package/eslint-plugin-unused-imports#usage
     },
   },
   formatters: true, // https://github.com/antfu/eslint-config?tab=readme-ov-file#formatters
@@ -43,13 +51,6 @@ export const lengthRules: UserConfigItem = {
         ignoreRegExpLiterals: true, // https://eslint.org/docs/latest/rules/max-len#ignoreregexpliterals
       },
     ],
-  },
-}
-
-export const unusedVarsRules: UserConfigItem = {
-  files: ['**/*.js', '**/*.ts', '**/*.jsx', '**/*.tsx'],
-  rules: {
-    'unused-imports/no-unused-vars': 'warn', // https://www.npmjs.com/package/eslint-plugin-unused-imports#usage
   },
 }
 
