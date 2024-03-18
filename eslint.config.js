@@ -4,4 +4,5 @@ export default antfu({
   typescript: {
     tsconfigPath: 'tsconfig.json',
   },
+  formatters: true,
 })

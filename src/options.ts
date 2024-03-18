@@ -8,9 +8,7 @@ export const defaultOptions: OptionsConfig & FlatConfigItem = {
       extraFileExtensions: ['.vue'],
     },
   },
-  formatters: { // https://github.com/antfu/eslint-config?tab=readme-ov-file#formatters
-    markdown: 'prettier',
-  },
+  formatters: true, // https://github.com/antfu/eslint-config?tab=readme-ov-file#formatters
 }
 
 export const vueRules: UserConfigItem = {
