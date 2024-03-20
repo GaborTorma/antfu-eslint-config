@@ -1,4 +1,4 @@
-import type { Awaitable, FlatConfigItem, OptionsConfig, UserConfigItem } from '@antfu/eslint-config'
+import type { FlatConfigItem, OptionsConfig, UserConfigItem } from '@antfu/eslint-config'
 
 export const defaultOptions: OptionsConfig & FlatConfigItem = {
   // https://github.com/antfu/eslint-config?tab=readme-ov-file#type-aware-rules
@@ -25,6 +25,21 @@ export const defaultOptions: OptionsConfig & FlatConfigItem = {
     },
   },
   formatters: true, // https://github.com/antfu/eslint-config?tab=readme-ov-file#formatters
+  stylistic: {
+    overrides: {
+      // https://eslint.style/rules/js/max-len
+      'style/max-len': ['warn', {
+        code: 125, // https://eslint.style/rules/js/max-len#code
+        tabWidth: 2, // https://eslint.style/rules/js/max-len#tabwidth
+        ignoreComments: true, // https://eslint.style/rules/js/max-len#ignorecomments
+        ignoreTrailingComments: true, // https://eslint.style/rules/js/max-len#ignoretrailingcomments
+        ignoreUrls: true, // https://eslint.style/rules/js/max-len#ignoreurls
+        ignoreStrings: true, // https://eslint.style/rules/js/max-len#ignorestrings
+        ignoreTemplateLiterals: true, // https://eslint.style/rules/js/max-len#ignoretemplateliterals
+        ignoreRegExpLiterals: true, // https://eslint.style/rules/js/max-len#ignoreregexpliterals
+      }],
+    },
+  },
 }
 
 export const vueRules: UserConfigItem = {
@@ -41,24 +56,6 @@ export const vueRules: UserConfigItem = {
       singleline: 100, // https://eslint.vuejs.org/rules/max-attributes-per-line#singleline-3
       multiline: 1, // https://eslint.vuejs.org/rules/max-attributes-per-line#multiline-2
     }],
-  },
-}
-
-export const lengthRules: UserConfigItem = {
-  rules: {
-    // https://eslint.org/docs/latest/rules/max-len
-    'max-len': [
-      'warn',
-      {
-        code: 125, // https://eslint.org/docs/latest/rules/max-len#code
-        ignoreComments: true, // https://eslint.org/docs/latest/rules/max-len#ignorecomments
-        ignoreTrailingComments: true, // https://eslint.org/docs/latest/rules/max-len#ignoretrailingcomments
-        ignoreUrls: true, // https://eslint.org/docs/latest/rules/max-len#ignoreurls
-        ignoreStrings: true, // https://eslint.org/docs/latest/rules/max-len#ignorestrings
-        ignoreTemplateLiterals: true, // https://eslint.org/docs/latest/rules/max-len#ignoretemplateliterals
-        ignoreRegExpLiterals: true, // https://eslint.org/docs/latest/rules/max-len#ignoreregexpliterals
-      },
-    ],
   },
 }
 
