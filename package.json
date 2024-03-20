@@ -38,14 +38,14 @@
   "scripts": {
     "build": "unbuild",
     "dev": "unbuild --stub",
-    "lint": "eslint .",
-    "lint:fix": "eslint . --fix",
+    "lint": "nr dev && eslint .",
+    "lint:fix": "nr dev && eslint . --fix",
     "prepublishOnly": "nr build",
     "release": "bumpp && npm publish --access=public",
     "start": "esno src/index.ts",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
-    "view": "eslint-flat-config-viewer",
+    "view": "nr dev && eslint-flat-config-viewer",
     "prepare": "simple-git-hooks"
   },
   "dependencies": {

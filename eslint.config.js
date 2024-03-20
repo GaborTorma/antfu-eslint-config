@@ -1,8 +1,6 @@
-import antfu from '@antfu/eslint-config'
+// eslint-disable-next-line antfu/no-import-dist
+import config from './dist/index.mjs'
 
-export default antfu({
-  typescript: {
-    tsconfigPath: 'tsconfig.json',
-  },
-  formatters: true,
+export default config({
+  vue: true,
 })
