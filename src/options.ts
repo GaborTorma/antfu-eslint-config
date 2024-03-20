@@ -37,6 +37,7 @@ export const defaultOptions: OptionsConfig & FlatConfigItem = {
         ignoreStrings: true, // https://eslint.style/rules/js/max-len#ignorestrings
         ignoreTemplateLiterals: true, // https://eslint.style/rules/js/max-len#ignoretemplateliterals
         ignoreRegExpLiterals: true, // https://eslint.style/rules/js/max-len#ignoreregexpliterals
+        ignorePattern: `^(\\s+|export\\s(default\\s)?)function`, // https://eslint.style/rules/js/max-len#ignorepattern
       }],
     },
   },
