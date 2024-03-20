@@ -49,8 +49,11 @@ export const vueRules: UserConfigItem = {
     // https://eslint.vuejs.org/rules/component-name-in-template-casing
     'vue/component-name-in-template-casing': [
       'error',
-      'kebab-case', // https://eslint.vuejs.org/rules/component-name-in-template-casing#kebab-case
-      { registeredComponentsOnly: false },
+      'PascalCase', // https://eslint.vuejs.org/rules/component-name-in-template-casing#pascalcase
+      {
+        registeredComponentsOnly: false, // https://eslint.vuejs.org/rules/component-name-in-template-casing#registeredcomponentsonly
+        ignores: ['/^v-/'], // ignore vuetify components // https://eslint.vuejs.org/rules/component-name-in-template-casing#ignores
+      },
     ],
     // https://eslint.vuejs.org/rules/max-attributes-per-line
     'vue/max-attributes-per-line': ['warn', {
