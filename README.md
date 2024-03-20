@@ -5,7 +5,7 @@
 [![License][license-src]][license-href]
 [![code style][code-style-src]][code-style-href]
 
-My custom options and rules for @antfu/eslint-config
+My custom options and rules for [@antfu/eslint-config](https://github.com/antfu/eslint-config)
 
 ## License
 
