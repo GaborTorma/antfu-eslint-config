@@ -1,4 +1,4 @@
-# antfu-eslint-config
+# @gabortorma/antfu-eslint-config
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
@@ -6,6 +6,19 @@
 [![code style][code-style-src]][code-style-href]
 
 My custom options and rules for [@antfu/eslint-config](https://github.com/antfu/eslint-config)
+
+## Install
+
+```bash
+# Using pnpm
+pnpm add -D @gabortorma/antfu-eslint-config
+
+# Using yarn
+yarn add --dev @gabortorma/antfu-eslint-config
+
+# Using npm
+npm install --save-dev @gabortorma/antfu-eslint-config
+```
 
 ## License
 
