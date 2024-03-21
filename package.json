@@ -50,10 +50,12 @@
   },
   "dependencies": {
     "@antfu/eslint-config": "2.8.3",
+    "@nuxt/eslint": "0.3.0-beta.2",
     "defu": "^6.1.4",
     "eslint": "8.57.0",
     "eslint-plugin-format": "0.1.0",
-    "prettier": "3.2.5"
+    "prettier": "3.2.5",
+    "vite-plugin-eslint2": "4.4.0"
   },
   "devDependencies": {
     "@antfu/ni": "^0.21.12",
