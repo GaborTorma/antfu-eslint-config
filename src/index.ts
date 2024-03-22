@@ -1,7 +1,7 @@
 import type { Awaitable, FlatConfigItem, OptionsConfig, UserConfigItem } from '@antfu/eslint-config'
 import config from '@antfu/eslint-config'
 import { defu } from 'defu'
-import { consoleRules, defaultOptions, defaultRules, vueRules } from './options'
+import { consoleRules, defaultOptions, defaultRules, packageJsonRules, vueRules } from './options'
 
 export default function antfu(options?: OptionsConfig & FlatConfigItem, ...userConfigs: Awaitable<UserConfigItem | UserConfigItem[]>[]): Promise<UserConfigItem[]> {
   return config(
@@ -12,6 +12,7 @@ export default function antfu(options?: OptionsConfig & FlatConfigItem, ...userC
     defaultRules,
     vueRules,
     consoleRules,
+    packageJsonRules,
     ...userConfigs,
   )
 }

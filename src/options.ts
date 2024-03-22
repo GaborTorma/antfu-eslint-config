@@ -78,3 +78,10 @@ export const defaultRules: UserConfigItem = {
     'ts/method-signature-style': ['error', 'method'], // https://typescript-eslint.io/rules/method-signature-style#method
   },
 }
+
+export const packageJsonRules: UserConfigItem = {
+  files: ['package.json'],
+  rules: {
+    'style/eol-last': 'off',
+  },
+}
