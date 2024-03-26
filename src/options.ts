@@ -13,6 +13,7 @@ export const defaultOptions: OptionsConfig & FlatConfigItem = {
         'warn',
         { args: 'after-used', argsIgnorePattern: '^_', vars: 'all', varsIgnorePattern: '^_' },
       ],
+      'ts/method-signature-style': ['error', 'method'], // https://typescript-eslint.io/rules/method-signature-style#method
     },
   },
   javascript: {
@@ -75,7 +76,6 @@ export const defaultRules: UserConfigItem = {
     'object-shorthand': ['error', 'always', {
       avoidQuotes: false, // https://eslint.org/docs/latest/rules/object-shorthand#avoidquotes
     }],
-    'ts/method-signature-style': ['error', 'method'], // https://typescript-eslint.io/rules/method-signature-style#method
   },
 }
 
