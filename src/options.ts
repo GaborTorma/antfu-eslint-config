@@ -82,6 +82,6 @@ export const defaultRules: UserConfigItem = {
 export const packageJsonRules: UserConfigItem = {
   files: ['package.json'],
   rules: {
-    'style/eol-last': 'off',
+    'style/eol-last': 'off', // https://eslint.style/rules/js/eol-last
   },
 }
