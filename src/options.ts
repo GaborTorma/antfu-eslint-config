@@ -1,6 +1,6 @@
-import type { FlatConfigItem, OptionsConfig, UserConfigItem } from '@antfu/eslint-config'
+import type { OptionsConfig, TypedFlatConfigItem } from '@antfu/eslint-config'
 
-export const defaultOptions: OptionsConfig & FlatConfigItem = {
+export const defaultOptions: OptionsConfig & TypedFlatConfigItem = {
   // https://github.com/antfu/eslint-config?tab=readme-ov-file#type-aware-rules
   typescript: {
     tsconfigPath: 'tsconfig.json',
@@ -44,7 +44,7 @@ export const defaultOptions: OptionsConfig & FlatConfigItem = {
   },
 }
 
-export const vueRules: UserConfigItem = {
+export const vueRules: TypedFlatConfigItem = {
   files: ['**/*.vue'],
   rules: {
     // https://eslint.vuejs.org/rules/component-name-in-template-casing
@@ -64,13 +64,13 @@ export const vueRules: UserConfigItem = {
   },
 }
 
-export const consoleRules: UserConfigItem = {
+export const consoleRules: TypedFlatConfigItem = {
   rules: {
     'no-console': 'off', // https://eslint.org/docs/latest/rules/no-console
   },
 }
 
-export const defaultRules: UserConfigItem = {
+export const defaultRules: TypedFlatConfigItem = {
   rules: {
     // https://eslint.org/docs/latest/rules/object-shorthand
     'object-shorthand': ['error', 'always', {
@@ -79,7 +79,7 @@ export const defaultRules: UserConfigItem = {
   },
 }
 
-export const packageJsonRules: UserConfigItem = {
+export const packageJsonRules: TypedFlatConfigItem = {
   files: ['package.json'],
   rules: {
     'style/eol-last': 'off', // https://eslint.style/rules/js/eol-last

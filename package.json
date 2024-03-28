@@ -2,9 +2,9 @@
   "name": "@gabortorma/antfu-eslint-config",
   "type": "module",
   "version": "0.4.3",
-  "packageManager": "pnpm@8.15.3",
+  "packageManager": "pnpm@8.15.5",
   "description": "Default options for @antfu/eslint-config",
-  "author": "Anthony Fu <anthonyfu117@hotmail.com>",
+  "author": "Gábor Torma <gabor@torma.dev>",
   "license": "MIT",
   "homepage": "https://github.com/gabortorma/antfu-eslint-config#readme",
   "repository": {
@@ -17,12 +17,12 @@
   "exports": {
     ".": {
       "types": "./dist/index.d.ts",
-      "import": "./dist/index.mjs",
+      "import": "./dist/index.js",
       "require": "./dist/index.cjs"
     }
   },
   "main": "./dist/index.mjs",
-  "module": "./dist/index.mjs",
+  "module": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "typesVersions": {
     "*": {
@@ -36,21 +36,20 @@
     "dist"
   ],
   "scripts": {
-    "build": "unbuild",
-    "dev": "unbuild --stub",
-    "lint": "nr dev && eslint .",
-    "lint:fix": "nr dev && eslint . --fix",
-    "prepublishOnly": "nr build",
+    "build": "tsup --format esm,cjs --clean --dts",
+    "stub": "tsup --format esm",
+    "dev": "tsup --format esm,cjs --watch & eslint-flat-config-viewer",
+    "watch": "tsup --format esm,cjs --watch",
+    "lint": "nr stub && eslint .",
+    "lint:fix": "nr stub && eslint . --fix",
     "release": "bumpp && npm publish --access=public",
-    "start": "esno src/index.ts",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
-    "view": "nr dev && eslint-flat-config-viewer",
     "prepare": "simple-git-hooks"
   },
   "dependencies": {
-    "@antfu/eslint-config": "2.9.0",
-    "@nuxt/eslint": "0.3.0-beta.4",
+    "@antfu/eslint-config": "2.11.3",
+    "@nuxt/eslint": "0.3.0-beta.5",
     "defu": "^6.1.4",
     "eslint": "8.57.0",
     "eslint-plugin-format": "0.1.0",
@@ -63,13 +62,12 @@
     "@types/node": "^20.11.30",
     "bumpp": "^9.4.0",
     "eslint-flat-config-viewer": "^0.1.14",
-    "esno": "^4.7.0",
     "lint-staged": "^15.2.2",
     "pnpm": "^8.15.5",
     "rimraf": "^5.0.5",
     "simple-git-hooks": "^2.11.1",
+    "tsup": "^8.0.2",
     "typescript": "^5.4.3",
-    "unbuild": "^2.0.0",
     "vite": "^5.2.6",
     "vitest": "^1.4.0"
   },
