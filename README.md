@@ -20,6 +20,17 @@ yarn add --dev @gabortorma/antfu-eslint-config
 npm install --save-dev @gabortorma/antfu-eslint-config
 ```
 
+### Setup
+
+And create `eslint.config.mjs` in your project root:
+
+```js
+// eslint.config.mjs
+import antfu from '@gabortorma/antfu-eslint-config'
+
+export default antfu()
+```
+
 ## License
 
 [MIT](./LICENSE) License © 2024-present
