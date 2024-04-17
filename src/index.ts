@@ -1,18 +1,17 @@
 import type { Linter } from 'eslint'
-import type { FlatConfigPipeline } from 'eslint-flat-config-utils'
+import type { FlatConfigComposer } from 'eslint-flat-config-utils'
 import type { Awaitable, OptionsConfig, TypedFlatConfigItem } from '@antfu/eslint-config'
 import config from '@antfu/eslint-config'
 import { defu } from 'defu'
-import { consoleRules, defaultOptions, defaultRules, packageJsonRules, vueRules } from './options'
+import { consoleRules, defaultOptions, defaultRules, packageJsonRules } from './options'
 
-export default function antfu(options?: OptionsConfig & TypedFlatConfigItem, ...userConfigs: Awaitable<TypedFlatConfigItem | TypedFlatConfigItem[] | FlatConfigPipeline<any> | Linter.FlatConfig[]>[]): FlatConfigPipeline<TypedFlatConfigItem> {
+export default function antfu(options?: OptionsConfig & TypedFlatConfigItem, ...userConfigs: Awaitable<TypedFlatConfigItem | TypedFlatConfigItem[] | FlatConfigComposer<any> | Linter.FlatConfig[]>[]): FlatConfigComposer<TypedFlatConfigItem> {
   return config(
     defu(
       options,
       defaultOptions,
     ),
     defaultRules,
-    vueRules,
     consoleRules,
     packageJsonRules,
     ...userConfigs,
