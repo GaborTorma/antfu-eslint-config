@@ -22,7 +22,7 @@ npm install --save-dev @gabortorma/antfu-eslint-config
 
 ### Setup
 
-And create `eslint.config.mjs` in your project root:
+Create `eslint.config.mjs` in your project root:
 
 ```js
 // eslint.config.mjs
