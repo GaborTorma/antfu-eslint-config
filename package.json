@@ -1,7 +1,7 @@
 {
   "name": "@gabortorma/antfu-eslint-config",
   "type": "module",
-  "version": "0.5.6",
+  "version": "0.5.7",
   "packageManager": "pnpm@9.1.0",
   "description": "Default options for @antfu/eslint-config",
   "author": "Gábor Torma <gabor@torma.dev>",
