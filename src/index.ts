@@ -5,7 +5,7 @@ import config from '@antfu/eslint-config'
 import { defu } from 'defu'
 import { consoleRules, defaultOptions, defaultRules, packageJsonRules } from './options'
 
-export default function antfu(options?: OptionsConfig & TypedFlatConfigItem, ...userConfigs: Awaitable<TypedFlatConfigItem | TypedFlatConfigItem[] | FlatConfigComposer<any> | Linter.FlatConfig[]>[]): FlatConfigComposer<TypedFlatConfigItem> {
+export default async function antfu(options?: OptionsConfig & TypedFlatConfigItem, ...userConfigs: Awaitable<TypedFlatConfigItem | TypedFlatConfigItem[] | FlatConfigComposer<any> | Linter.FlatConfig[]>[]): Promise<FlatConfigComposer<TypedFlatConfigItem>> {
   return config(
     defu(
       options,
