@@ -29,6 +29,7 @@ export const defaultOptions: OptionsConfig & TypedFlatConfigItem = {
         { args: 'after-used', argsIgnorePattern: '^_', vars: 'all', varsIgnorePattern: '^_' },
       ],
       'ts/method-signature-style': ['error', 'method'], // https://typescript-eslint.io/rules/method-signature-style#method
+      'ts/strict-boolean-expressions': 'off', // https://typescript-eslint.io/rules/strict-boolean-expressions
       ...styleMaxLen,
     },
   },
