@@ -2,7 +2,7 @@
   "name": "@gabortorma/antfu-eslint-config",
   "type": "module",
   "version": "0.5.17",
-  "packageManager": "pnpm@9.4.0+sha512.f549b8a52c9d2b8536762f99c0722205efc5af913e77835dbccc3b0b0b2ca9e7dc8022b78062c17291c48e88749c70ce88eb5a74f1fa8c4bf5e18bb46c8bd83a",
+  "packageManager": "pnpm@9.6.0+sha512.38dc6fba8dba35b39340b9700112c2fe1e12f10b17134715a4aa98ccf7bb035e76fd981cf0bb384dfa98f8d6af5481c2bef2f4266a24bfa20c34eb7147ce0b5e",
   "description": "Default options for @antfu/eslint-config",
   "author": "Gábor Torma <gabor@torma.dev>",
   "license": "MIT",
@@ -38,7 +38,7 @@
   "scripts": {
     "build": "tsup --format esm,cjs --clean --dts",
     "stub": "tsup --format esm",
-    "dev": "tsup --format esm,cjs --watch & eslint-flat-config-viewer",
+    "dev": "tsup --format esm,cjs --watch & npx @eslint/config-inspector",
     "watch": "tsup --format esm,cjs --watch",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
@@ -51,27 +51,34 @@
     "prepare": "simple-git-hooks"
   },
   "dependencies": {
-    "@antfu/eslint-config": "2.23.1",
-    "@nuxt/eslint": "0.3.13",
+    "@antfu/eslint-config": "2.24.1",
+    "@nuxt/eslint": "0.5.0",
     "defu": "^6.1.4",
-    "eslint": "8.57.0",
+    "eslint": "9.8.0",
     "eslint-plugin-format": "0.1.2",
     "prettier": "3.3.3",
     "vite-plugin-eslint2": "4.4.0"
   },
   "devDependencies": {
     "@antfu/ni": "^0.22.0",
-    "@types/node": "^20.14.11",
-    "bumpp": "^9.4.1",
-    "eslint-flat-config-viewer": "^0.1.20",
-    "lint-staged": "^15.2.7",
-    "pnpm": "^9.5.0",
+    "@eslint/config-inspector": "^0.5.2",
+    "@types/node": "^20.14.14",
+    "bumpp": "^9.4.2",
+    "lint-staged": "^15.2.8",
+    "pnpm": "^9.6.0",
     "rimraf": "^6.0.1",
     "simple-git-hooks": "^2.11.1",
-    "tsup": "^8.2.0",
-    "typescript": "^5.5.3",
-    "vite": "^5.3.4",
-    "vitest": "^2.0.3"
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4",
+    "vite": "^5.3.5",
+    "vitest": "^2.0.5"
+  },
+  "pnpm": {
+    "peerDependencyRules": {
+      "allowedVersions": {
+        "eslint": "9"
+      }
+    }
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
