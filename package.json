@@ -51,8 +51,8 @@
     "prepare": "simple-git-hooks"
   },
   "dependencies": {
-    "@antfu/eslint-config": "2.23.1",
-    "@nuxt/eslint": "0.3.13",
+    "@antfu/eslint-config": "2.21.3",
+    "@nuxt/eslint": "0.4.0",
     "defu": "^6.1.4",
     "eslint": "8.57.0",
     "eslint-plugin-format": "0.1.2",
@@ -61,17 +61,17 @@
   },
   "devDependencies": {
     "@antfu/ni": "^0.22.0",
-    "@types/node": "^20.14.11",
-    "bumpp": "^9.4.1",
+    "@types/node": "^20.14.14",
+    "bumpp": "^9.4.2",
     "eslint-flat-config-viewer": "^0.1.20",
-    "lint-staged": "^15.2.7",
-    "pnpm": "^9.5.0",
+    "lint-staged": "^15.2.8",
+    "pnpm": "^9.6.0",
     "rimraf": "^6.0.1",
     "simple-git-hooks": "^2.11.1",
-    "tsup": "^8.2.0",
-    "typescript": "^5.5.3",
-    "vite": "^5.3.4",
-    "vitest": "^2.0.3"
+    "tsup": "^8.2.4",
+    "typescript": "^5.5.4",
+    "vite": "^5.3.5",
+    "vitest": "^2.0.5"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
