@@ -9,10 +9,6 @@ export const defaultOptions: OptionsConfig & TypedFlatConfigItem = {
     },
     overrides: {
       // https://www.npmjs.com/package/eslint-plugin-unused-imports#usage
-      'unused-imports/no-unused-vars': [
-        'warn',
-        { args: 'after-used', argsIgnorePattern: '^_', vars: 'all', varsIgnorePattern: '^_' },
-      ],
       'ts/method-signature-style': ['error', 'method'], // https://typescript-eslint.io/rules/method-signature-style#method
       'ts/strict-boolean-expressions': 'off', // https://typescript-eslint.io/rules/strict-boolean-expressions
     },
@@ -33,7 +29,6 @@ export const defaultOptions: OptionsConfig & TypedFlatConfigItem = {
         singleline: 100, // https://eslint.vuejs.org/rules/max-attributes-per-line#singleline-3
         multiline: 1, // https://eslint.vuejs.org/rules/max-attributes-per-line#multiline-2
       }],
-
     },
   },
   javascript: {
@@ -74,5 +69,11 @@ export const packageJsonRules: TypedFlatConfigItem = {
   files: ['package.json'],
   rules: {
     'style/eol-last': 'off', // https://eslint.style/rules/js/eol-last
+  },
+}
+
+export const offStrictBooleanExpression: TypedFlatConfigItem = {
+  rules: {
+    'ts/strict-boolean-expressions': 'off',
   },
 }
