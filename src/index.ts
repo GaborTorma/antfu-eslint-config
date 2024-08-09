@@ -1,11 +1,10 @@
-import type { Linter } from 'eslint'
 import type { FlatConfigComposer } from 'eslint-flat-config-utils'
-import type { Awaitable, OptionsConfig, TypedFlatConfigItem } from '@antfu/eslint-config'
+import type { OptionsConfig, TypedFlatConfigItem } from '@antfu/eslint-config'
 import config from '@antfu/eslint-config'
 import { defu } from 'defu'
-import { defaultOptions, packageJsonRules, styleMaxLenRules } from './options'
+import { defaultOptions, offStrictBooleanExpression, packageJsonRules, styleMaxLenRules } from './options'
 
-export default async function antfu(options?: OptionsConfig & TypedFlatConfigItem, ...userConfigs: Awaitable<TypedFlatConfigItem | TypedFlatConfigItem[] | FlatConfigComposer<any> | Linter.FlatConfig[]>[]): Promise<FlatConfigComposer<TypedFlatConfigItem>> {
+export default async function antfu(options?: OptionsConfig & TypedFlatConfigItem): Promise<FlatConfigComposer<TypedFlatConfigItem>> {
   return config(
     defu(
       options,
@@ -13,6 +12,8 @@ export default async function antfu(options?: OptionsConfig & TypedFlatConfigIte
     ),
     packageJsonRules,
     styleMaxLenRules,
-    ...userConfigs,
+  ).override(
+    'antfu/typescript/rules-type-aware',
+    offStrictBooleanExpression,
   )
 }
