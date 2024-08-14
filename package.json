@@ -44,7 +44,7 @@
     "lint:fix": "eslint . --fix",
     "stub:lint": "nr stub && eslint .",
     "stub:lint:fix": "nr stub && eslint . --fix",
-    "release": "bumpp && npm publish --access=public",
+    "release": "nr build && bumpp && npm publish --access=public",
     "postrelease": "pnpm update \"@gabortorma/antfu-eslint-config\"",
     "test": "vitest",
     "typecheck": "tsc --noEmit",
