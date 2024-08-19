@@ -61,8 +61,8 @@
   },
   "devDependencies": {
     "@antfu/ni": "^0.22.4",
-    "@eslint/config-inspector": "^0.5.3",
-    "@types/node": "^20.16.0",
+    "@eslint/config-inspector": "^0.5.4",
+    "@types/node": "^20.16.1",
     "bumpp": "^9.5.1",
     "lint-staged": "^15.2.9",
     "pnpm": "^9.7.1",
