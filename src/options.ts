@@ -8,8 +8,9 @@ export const defaultOptions: OptionsConfig & TypedFlatConfigItem = {
       extraFileExtensions: ['.vue'],
     },
     overrides: {
-      // https://www.npmjs.com/package/eslint-plugin-unused-imports#usage
       'ts/method-signature-style': ['error', 'method'], // https://typescript-eslint.io/rules/method-signature-style#method
+    },
+    overridesTypeAware: {
       'ts/strict-boolean-expressions': 'off', // https://typescript-eslint.io/rules/strict-boolean-expressions
     },
   },
