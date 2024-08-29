@@ -52,7 +52,7 @@
   },
   "dependencies": {
     "@antfu/eslint-config": "3.0.0",
-    "@nuxt/eslint": "0.5.3",
+    "@nuxt/eslint": "0.5.4",
     "defu": "^6.1.4",
     "eslint": "9.9.1",
     "eslint-plugin-format": "0.1.2",
