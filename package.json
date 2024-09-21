@@ -45,8 +45,7 @@
     "prerelease": "pnpm build && pnpm typecheck && pnpm lint",
     "release": "dotenv release-it",
     "typecheck": "tsc --noEmit",
-    "prepare": "simple-git-hooks",
-    "postinstall": "pnpm run stub"
+    "prepare": "simple-git-hooks"
   },
   "dependencies": {
     "@antfu/eslint-config": "3.7.1",
