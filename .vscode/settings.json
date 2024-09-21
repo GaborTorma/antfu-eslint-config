@@ -1,7 +1,4 @@
 {
-  // Enable the ESlint flat config support
-  "eslint.useFlatConfig": true,
-
   // Disable the default formatter, use eslint instead
   "prettier.enable": false,
   "editor.formatOnType": false,
@@ -51,11 +48,5 @@
     "scss",
     "pcss",
     "postcss"
-  ],
-
-  "workbench.colorCustomizations": {
-    "activityBar.background": "#30255B",
-    "titleBar.activeBackground": "#43337F",
-    "titleBar.activeForeground": "#FCFCFE"
-  }
+  ]
 }
