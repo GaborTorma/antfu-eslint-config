@@ -8,7 +8,7 @@
   "license": "MIT",
   "homepage": "https://github.com/gabortorma/antfu-eslint-config#readme",
   "repository": {
-    "type": "git",
+    "type": "github",
     "url": "git+https://github.com/gabortorma/antfu-eslint-config.git"
   },
   "bugs": "https://github.com/gabortorma/antfu-eslint-config/issues",
@@ -38,17 +38,15 @@
   "scripts": {
     "build": "tsup --format esm,cjs --clean --dts",
     "stub": "tsup --format esm",
-    "dev": "tsup --format esm,cjs --watch & npx @eslint/config-inspector",
+    "dev": "pnpm stub --watch & pnpm dlx @eslint/config-inspector",
     "watch": "tsup --format esm,cjs --watch",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "stub:lint": "nr stub && eslint .",
-    "stub:lint:fix": "nr stub && eslint . --fix",
-    "release": "nr build && bumpp && npm publish --access=public",
-    "postrelease": "pnpm update \"@gabortorma/antfu-eslint-config\"",
-    "test": "vitest",
+    "prerelease": "pnpm build && pnpm typecheck && pnpm lint",
+    "release": "dotenv release-it",
     "typecheck": "tsc --noEmit",
-    "prepare": "simple-git-hooks"
+    "prepare": "simple-git-hooks",
+    "postinstall": "pnpm run stub"
   },
   "dependencies": {
     "@antfu/eslint-config": "3.7.1",
@@ -59,18 +57,15 @@
     "vite-plugin-eslint2": "4.4.1"
   },
   "devDependencies": {
-    "@antfu/ni": "^0.23.0",
-    "@eslint/config-inspector": "^0.5.4",
     "@types/node": "^22.5.5",
-    "bumpp": "^9.5.2",
+    "dotenv-cli": "^7.4.2",
     "lint-staged": "^15.2.10",
     "pnpm": "^9.11.0",
+    "release-it": "^17.6.0",
     "rimraf": "^6.0.1",
     "simple-git-hooks": "^2.11.1",
     "tsup": "^8.3.0",
-    "typescript": "^5.6.2",
-    "vite": "^5.4.7",
-    "vitest": "^2.1.1"
+    "typescript": "^5.6.2"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
