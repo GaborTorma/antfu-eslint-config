@@ -49,6 +49,7 @@ export const defaultOptions: OptionsConfig & TypedFlatConfigItem = {
 }
 
 export const styleMaxLenRules: TypedFlatConfigItem = {
+  name: 'gabortorma/style/max-len',
   files: ['**/*.?([cm])js', '**/*.?([cm])jsx', '**/*.?([cm])ts', '**/*.?([cm])tsx', '**/*.vue'],
   rules: {
     // https://eslint.style/rules/js/max-len
@@ -67,6 +68,7 @@ export const styleMaxLenRules: TypedFlatConfigItem = {
 }
 
 export const packageJsonRules: TypedFlatConfigItem = {
+  name: 'gabortorma/package-json/off/eol-last',
   files: ['package.json'],
   rules: {
     'style/eol-last': 'off', // https://eslint.style/rules/js/eol-last
@@ -74,6 +76,7 @@ export const packageJsonRules: TypedFlatConfigItem = {
 }
 
 export const offStrictBooleanExpression: TypedFlatConfigItem = {
+  name: 'off/strict-boolean-expression',
   rules: {
     'ts/strict-boolean-expressions': 'off',
   },
