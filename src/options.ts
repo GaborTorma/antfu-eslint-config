@@ -78,3 +78,17 @@ export const offStrictBooleanExpression: TypedFlatConfigItem = {
     'ts/strict-boolean-expressions': 'off',
   },
 }
+
+// Github issue: https://github.com/nuxt/eslint/issues/501
+export const nuxtDisablesRoutesWorkaround: TypedFlatConfigItem = {
+  // These files must have one-word names as they have a special meaning in Nuxt.
+  files: ['**/app.{js,ts,jsx,tsx,vue}', '**/components/*/**/*.{js,ts,jsx,tsx,vue}', '**/error.{js,ts,jsx,tsx,vue}', '**/layouts/**/*.{js,ts,jsx,tsx,vue}', '**/pages/**/*.{js,ts,jsx,tsx,vue}'],
+  rules: { 'vue/multi-word-component-name': 'off' },
+}
+
+// Github issue: https://github.com/nuxt/eslint/issues/501
+export const nuxtVueSingleRootWorkaround: TypedFlatConfigItem = {
+  // Pages and layouts are required to have a single root element if transitions are enabled.
+  files: ['**/pages/**/*.{js,ts,jsx,tsx,vue}', '**/layouts/**/*.{js,ts,jsx,tsx,vue}', '**/components/**/*.server.{js,ts,jsx,tsx,vue}'],
+  rules: { 'vue/no-multiple-template-root': 'error' },
+}
