@@ -42,9 +42,9 @@
     "watch": "tsup --format esm,cjs --watch",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
-    "prerelease": "pnpm build && pnpm typecheck && pnpm lint",
+    "prerelease": "pnpm build && pnpm test:types && pnpm lint",
     "release": "dotenv release-it",
-    "typecheck": "tsc --noEmit",
+    "test:types": "tsc --noEmit",
     "prepare": "simple-git-hooks"
   },
   "dependencies": {
