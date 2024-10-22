@@ -2,7 +2,7 @@
   "name": "@gabortorma/antfu-eslint-config",
   "type": "module",
   "version": "2.0.7",
-  "packageManager": "pnpm@9.11.0+sha512.0a203ffaed5a3f63242cd064c8fb5892366c103e328079318f78062f24ea8c9d50bc6a47aa3567cabefd824d170e78fa2745ed1f16b132e16436146b7688f19b",
+  "packageManager": "pnpm@9.12.2+sha512.22721b3a11f81661ae1ec68ce1a7b879425a1ca5b991c975b074ac220b187ce56c708fe5db69f4c962c989452eee76c82877f4ee80f474cebd61ee13461b6228",
   "description": "Default options for @antfu/eslint-config",
   "author": "Gábor Torma <gabor@torma.dev>",
   "license": "MIT",
@@ -48,22 +48,22 @@
     "prepare": "simple-git-hooks"
   },
   "dependencies": {
-    "@antfu/eslint-config": "3.7.3",
+    "@antfu/eslint-config": "3.8.0",
     "defu": "^6.1.4",
-    "eslint": "9.11.1",
+    "eslint": "9.13.0",
     "eslint-plugin-format": "0.1.2",
     "prettier": "3.3.3"
   },
   "devDependencies": {
-    "@types/node": "^22.7.4",
+    "@types/node": "^22.7.8",
     "dotenv-cli": "^7.4.2",
     "lint-staged": "^15.2.10",
-    "pnpm": "^9.11.0",
-    "release-it": "^17.6.0",
+    "pnpm": "^9.12.2",
+    "release-it": "^17.10.0",
     "rimraf": "^6.0.1",
     "simple-git-hooks": "^2.11.1",
     "tsup": "^8.3.0",
-    "typescript": "^5.6.2"
+    "typescript": "^5.6.3"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
