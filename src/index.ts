@@ -3,7 +3,7 @@ import type { Linter } from 'eslint'
 import type { FlatConfigComposer } from 'eslint-flat-config-utils'
 import config from '@antfu/eslint-config'
 import { defu } from 'defu'
-import { defaultOptions, nuxtDisablesRoutesWorkaround, nuxtVueSingleRootWorkaround, packageJsonRules, styleMaxLenRules } from './options'
+import { defaultOptions, packageJsonRules, styleMaxLenRules } from './options'
 
 // eslint-disable-next-line ts/promise-function-async
 export default function antfu(options?: OptionsConfig & Omit<TypedFlatConfigItem, 'files'>, ...userConfigs: Awaitable<TypedFlatConfigItem | TypedFlatConfigItem[] | FlatConfigComposer<any, any> | Linter.Config[]>[]): FlatConfigComposer<TypedFlatConfigItem, ConfigNames> {
@@ -14,8 +14,6 @@ export default function antfu(options?: OptionsConfig & Omit<TypedFlatConfigItem
     ),
     packageJsonRules,
     styleMaxLenRules,
-    nuxtDisablesRoutesWorkaround,
-    nuxtVueSingleRootWorkaround,
     ...userConfigs,
   )
 }
