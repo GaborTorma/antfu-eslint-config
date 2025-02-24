@@ -2,7 +2,7 @@
   "name": "@gabortorma/antfu-eslint-config",
   "type": "module",
   "version": "2.4.2",
-  "packageManager": "pnpm@9.15.2+sha512.93e57b0126f0df74ce6bff29680394c0ba54ec47246b9cf321f0121d8d9bb03f750a705f24edc3c1180853afd7c2c3b94196d0a3d53d3e069d9e2793ef11f321",
+  "packageManager": "pnpm@10.4.1+sha512.c753b6c3ad7afa13af388fa6d808035a008e30ea9993f58c6663e2bc5ff21679aa834db094987129aa4d488b86df57f7b634981b2f827cdcacc698cc0cfb88af",
   "description": "Default options for @antfu/eslint-config",
   "author": "Gábor Torma <gabor@torma.dev>",
   "license": "MIT",
@@ -15,11 +15,7 @@
   "keywords": [],
   "sideEffects": false,
   "exports": {
-    ".": {
-      "types": "./dist/index.d.ts",
-      "import": "./dist/index.js",
-      "require": "./dist/index.cjs"
-    }
+    ".": "./dist/index.js"
   },
   "main": "./dist/index.mjs",
   "module": "./dist/index.js",
@@ -36,10 +32,10 @@
     "dist"
   ],
   "scripts": {
-    "build": "tsup --format esm,cjs --clean --dts",
-    "stub": "tsup --format esm",
+    "build": "tsup --clean --dts",
+    "stub": "tsup",
     "dev": "pnpm stub --watch & pnpm dlx @eslint/config-inspector",
-    "watch": "tsup --format esm,cjs --watch",
+    "watch": "tsup --watch",
     "lint": "eslint .",
     "lint:fix": "eslint . --fix",
     "prerelease": "pnpm build && pnpm test:types && pnpm lint",
@@ -48,22 +44,22 @@
     "prepare": "simple-git-hooks"
   },
   "dependencies": {
-    "@antfu/eslint-config": "3.12.1",
+    "@antfu/eslint-config": "4.3.0",
     "defu": "^6.1.4",
-    "eslint": "9.17.0",
-    "eslint-plugin-format": "0.1.3",
-    "prettier": "3.4.2"
+    "eslint": "9.21.0",
+    "eslint-plugin-format": "1.0.1",
+    "prettier": "3.5.2"
   },
   "devDependencies": {
-    "@types/node": "^22.10.2",
+    "@types/node": "^22.13.5",
     "dotenv-cli": "^8.0.0",
-    "lint-staged": "^15.3.0",
-    "pnpm": "^9.15.2",
-    "release-it": "^17.11.0",
+    "lint-staged": "^15.4.3",
+    "pnpm": "^10.4.1",
+    "release-it": "^18.1.2",
     "rimraf": "^6.0.1",
     "simple-git-hooks": "^2.11.1",
-    "tsup": "^8.3.5",
-    "typescript": "^5.6.3 <5.7"
+    "tsup": "^8.3.6",
+    "typescript": "5.6.3"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm lint-staged"
