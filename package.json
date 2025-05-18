@@ -52,6 +52,7 @@
     "lint-staged": "catalog:",
     "pnpm": "catalog:",
     "release-it": "catalog:",
+    "release-it-pnpm": "catalog:",
     "rimraf": "catalog:",
     "simple-git-hooks": "catalog:",
     "tsup": "catalog:",
