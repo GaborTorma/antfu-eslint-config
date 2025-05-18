@@ -46,6 +46,7 @@ export const defaultOptions: OptionsConfig & TypedFlatConfigItem = {
     },
   },
   formatters: true, // https://github.com/antfu/eslint-config?tab=readme-ov-file#formatters
+  pnpm: true, // https://www.npmjs.com/package/eslint-plugin-pnpm
 }
 
 export const styleMaxLenRules: TypedFlatConfigItem = {
