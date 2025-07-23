@@ -1,20 +1,21 @@
 catalog:
-  '@antfu/eslint-config': 4.13.1
-  '@types/node': ^22.15.18
+  '@antfu/eslint-config': 4.18.0
+  '@types/node': ^24.1.0
   defu: ^6.1.4
-  dotenv-cli: ^8.0.0
-  eslint: 9.27.0
-  eslint-flat-config-utils: ^2.0.1
+  dotenv-cli: ^9.0.0
+  eslint: 9.31.0
+  eslint-flat-config-utils: ^2.1.0
   eslint-plugin-format: 1.0.1
-  lint-staged: ^16.0.0
-  pnpm: ^10.11.0
-  prettier: 3.5.3
-  release-it: ^19.0.2
-  release-it-pnpm: ^4.6.5
+  lint-staged: ^16.1.2
+  pnpm: ^10.13.1
+  prettier: 3.6.2
+  release-it: ^19.0.4
+  release-it-pnpm: ^4.6.6
   rimraf: ^6.0.1
   simple-git-hooks: ^2.13.0
   tsup: ^8.5.0
   typescript: 5.8.3
+
 onlyBuiltDependencies:
   - esbuild
   - simple-git-hooks
